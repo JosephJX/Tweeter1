@@ -43,3 +43,7 @@
   color: #ffffff;
   padding: 0.15em;
 }
+
+.counter.error {
+  color: red;
+}
