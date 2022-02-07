@@ -1,0 +1,115 @@
+/* ----- Responsive Design ----- */
+
+/* MOBILE */
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  nav {
+    width: 30%;
+    font-size: 16px;
+    height: fit-content;
+  }
+  .headerLogo {
+    font-size: 24px;
+  }
+  .profile-header {
+    clear: right;
+    height: 40%;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #tweets-container {
+    width: 90%;
+  }
+  article {
+    padding: 1em;
+  }
+  .tweet-footer {
+    font-size: 12px;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  nav {
+    width: 30%;
+    height: fit-content;
+  }
+  .headerLogo {
+    font-size: 30px;
+  }
+  .profile-header {
+    clear: right;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #tweets-container {
+    width: 90%;
+  }
+  article {
+    padding: 1em;
+  }
+  .tweet-footer {
+    font-size: 14px;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .headerLogo {
+    font-size: 40px;
+  }
+  nav {
+    height: 75px;
+  }
+  main {
+    width: 55%;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile-header {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #tweets-container {
+    width: 90%;
+    padding: 0.5em;
+  }
+  article {
+    padding: 0.5em;
+  }
+  .tweet-footer {
+    font-size: 16px;
+  }
+  .tweeted-text {
+    font-size: 20px;
+  }
+  #tweetText {
+    font-size: 0.8em;
+  }
+}
