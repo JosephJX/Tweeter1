@@ -12,8 +12,6 @@ $(document).ready(function () {
       url: '/tweets',
 
     }).then((response) => {
-      // console.log("RESPONSE: ");
-      // console.log(response);
       renderTweets(response);
       $('#tweet-text').val("");
       $(".counter").text(140);
@@ -21,43 +19,35 @@ $(document).ready(function () {
   };
   loadTweets();
 
-
-  $('.new-tweet-form').on('submit', function (event) {
-
-    event.preventDefault();
-    console.log('Submit is being triggered')
-
-    // const data = [
-    //   {
-    //     "user": {
-    //       "name": "Newton",
-    //       "avatars": "https://i.imgur.com/73hZDYK.png"
-    //       ,
-    //       "handle": "@SirIsaac"
-    //     },
-    //     "content": {
-    //       "text": "If I have seen further it is by standing on the shoulders of giants"
-    //     },
-    //     "created_at": 1461116232227
-    //   },
-    //   {
-    //     "user": {
-    //       "name": "Descartes",
-    //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-    //       "handle": "@rd"
-    //     },
-    //     "content": {
-    //       "text": "Je pense , donc je suis"
-    //     },
-    //     "created_at": 1461113959088
-    //   }
-    // ];
-
-
-    const createTweetElement = function (tweet) {
-      let date = timeago.format(tweet.created_at);
-      let $tweet = $(
-        `<article class="tweet-header wrapper">
+  // const data = [
+  //   {
+  //     "user": {
+  //       "name": "Newton",
+  //       "avatars": "https://i.imgur.com/73hZDYK.png"
+  //       ,
+  //       "handle": "@SirIsaac"
+  //     },
+  //     "content": {
+  //       "text": "If I have seen further it is by standing on the shoulders of giants"
+  //     },
+  //     "created_at": 1461116232227
+  //   },
+  //   {
+  //     "user": {
+  //       "name": "Descartes",
+  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
+  //       "handle": "@rd"
+  //     },
+  //     "content": {
+  //       "text": "Je pense , donc je suis"
+  //     },
+  //     "created_at": 1461113959088
+  //   }
+  // ];
+  const createTweetElement = function (tweet) {
+    let date = timeago.format(tweet.created_at);
+    let $tweet = $(
+      `<article class="tweet-header wrapper">
          <header>
                <img class="left" id="pic" src="${tweet.user.avatars}">
                <h1 class="left">${tweet.user.name}</h1>
@@ -76,23 +66,46 @@ $(document).ready(function () {
          </footer>
          </article> `)
 
-      return $tweet;
-    };
+    return $tweet;
+  };
 
 
-    const renderTweets = function (tweets) {
-      $("#tweets").empty();
-      console.log($('.tweets-container'));
-      for (let tweet of tweets) {
-        $('.tweets-container').prepend(createTweetElement(tweet));
-      }
+  const renderTweets = function (tweets) {
+    $("#tweets").empty();
+    console.log($('.tweets-container'));
+    for (let tweet of tweets) {
+      $('.tweets-container').prepend(createTweetElement(tweet));
     }
-    renderTweets(data);
+  }
+  // const $newTweet = $('#submit-tweet');
+  // $newTweet.on('submit', function (event) {
+  //   event.preventDefault();
+  // });
+  const $newTweet = $('#tweet-form');
+  $newTweet.on('submit', function (event) {
+    event.preventDefault();
+    const tweet = $("#tweet-text").val().length;
+    console.log(tweet);
+    if (!tweet) {
+      $('#errorMessage').show();
+      $('#errorMessage').text("Tweet cannot be empty!");
+    };
+    if (tweet > 140) {
+      $('#errorMessage').show();
+      $('#errorMessage').text("Tweet can't be longer than 140 characters!");
+    } else {
+      const val = $(this).serialize();
+      $.ajax("/tweets", {
+        method: "POST",
+        data: val,
+      })
+        .then(() => {
+          $('#errorMessage').hide();
+          loadTweets();
+          $("#tweet-text").val("");
 
-    // const $newTweet = $('#submit-tweet');
-    // $newTweet.on('submit', function (event) {
-    //   event.preventDefault();
-    // });
+        });
+    }
   })
 
 });  
