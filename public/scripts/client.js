@@ -19,6 +19,12 @@ $(document).ready(function () {
   };
   loadTweets();
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // const data = [
   //   {
   //     "user": {
