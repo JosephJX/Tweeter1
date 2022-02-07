@@ -8,9 +8,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
   position: fixed;
   top: 0;
-  z-index: 1;
 }
 .compose {
   font-family: "Source Sans Pro", sans-serif;
