@@ -34,6 +34,7 @@ body {
   flex-direction: column;
 }
 
+/* For small screens */
 @media (min-width: 1024px) {
   body {
     display: flex;
@@ -41,7 +42,6 @@ body {
 
   nav.navbar {
     background-color: #4056a1;
-    /* background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png"); */
   }
 
   .header {
