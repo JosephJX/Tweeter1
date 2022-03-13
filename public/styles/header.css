@@ -9,8 +9,7 @@
 }
 
 .header-avatar {
-  /* width: fit-content;
-  max-width: 300px; */
+  width: fit-content;
 }
 
 .header-avatar img {
