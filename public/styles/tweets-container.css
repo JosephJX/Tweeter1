@@ -1,69 +1,63 @@
 .tweets-container {
+  margin-top: 1em;
 }
 
-.user {
+.tweet {
+  border: 0.1em solid black;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+.tweet:hover {
+  box-shadow: 2px 2px 2px black;
+}
+
+.tweet-header {
   display: flex;
-  justify-content: start;
-  flex-direction: row;
-  align-items: center;
-  width: 4em;
-}
-.userAvatar {
-  width: 50%;
+  justify-content: space-between;
 }
 
-.username {
+.tweet-header-user {
+  display: flex;
+  align-items: center;
+}
+
+.tweet-header-user-avatar {
+  width: fit-content;
+  max-width: 300px;
+}
+
+.tweet-header-user-avatar img {
+  width: 100%;
+}
+
+.tweet-header-user p {
+  padding-left: 0.5em;
   font-family: Bungee;
 }
 
-i.fas.fa-flag {
-  color: #2980b9;
-}
-i.fas.fa-flag:hover {
-  color: yellow;
+.tweet-header-handle {
+  color: #297fb977;
+  font-weight: bold;
 }
 
-i.fas.fa-retweet {
-  color: #2980b9;
+.tweet-content {
+  font-size: 1.25em;
+  font-weight: 600;
+  word-wrap: break-word;
 }
 
-i.fas.fa-retweet:hover {
-  color: yellow;
-}
-
-i.fas.fa-heart {
-  color: #2980b9;
-}
-
-i.fas.fa-heart:hover {
-  color: yellow;
-}
-
-article.tweet {
-  border: 0.1em solid black;
-  margin: 1em 0;
-}
-
-article.tweet header {
+.tweet-footer {
   display: flex;
   justify-content: space-between;
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-article.tweet p {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  border-top: 0.1em solid black;
 }
 
-article.tweet footer {
-  display: flex;
-  border-top: 0.1em solid black;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-between;
+.tweet-footer i {
+  color: #2980b9;
+}
+
+.tweet-footer i:hover {
+  color: yellow;
 }

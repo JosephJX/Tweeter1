@@ -46,23 +46,25 @@ $(document).ready(function () {
     };
     return `
     <article class="tweet">
-      <header>
-        <span class="user">
-          <img class="userAvatar" src=${tweet.user.avatars}>
-          <p class="username">${tweet.user.name}</p>
-        </span>
-        <div class="handle">${tweet.user.handle}</div>
+    <header class="tweet-header">
+        <div class="tweet-header-user">
+          <div class="tweet-header-user-avatar">
+            <img src="${tweet.user.avatars}" alt="user avatar">
+          </div>
+          <p>${tweet.user.name}</p>
+        </div>
+        <p class="tweet-header-handle">${tweet.user.handle}</p>
       </header>
-      <p>${escape(tweet.content.text)}</p>
-      <footer>
-        <span>${timeago.format(tweet.created_at, 'pt_BR')}</span>
-        <span>
+      <p class="tweet-content">${escape(tweet.content.text)}</p>
+      <footer class="tweet-footer">
+        <p class="tweet-footer-timestamp">${timeago.format(tweet.created_at, 'pt_BR')}</p>
+        <div class="tweet-footer-icons">
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
           <i class="fas fa-heart"></i>
-        </span>
-      </footer>
-    </article>
+          </div>
+          </footer>
+        </article>
     `;
   };
   // renderTweets(data);
