@@ -71,8 +71,32 @@
     ></script>
       <script src="/scripts/icon-color-change.js"></script>
 
+  </head>
 
-    <!-- Main Page-->
+  <body>
+
+<!-- Top nav bar (fixed) -->
+<div class="constainter">
+  <nav>
+    <div class="nav">
+      <span>tweeter</span>
+      <div class="newTweet">
+        <span>new tweet here</span>
+        <i class="fas fa-angle-double-down"></i>
+      </div>
+    </div>
+  </nav>
+  <header class="nameAndAvatar">
+    <div>
+        <img class="avatar" src="/images/profile-hex.png"> 
+    </div>
+    <br>
+    <div>
+        <h2 class="name">Your Name</h2>
+    </div>
+  </header>
+</div>
+    <!-- Main Page -->
 
     <main class="container">
       <section class="new-tweet">
@@ -85,25 +109,7 @@
           </div>
         </form>
       </section>
-      <section class="tweets-container">
-        <article class="tweet">
-          <header>
-            <span class="user">
-              <img class="userAvatar" src="/images/profile-hex.png">
-              <p class="username">name</p>
-            </span>
-            <div class="handle">tweeter handle</div>
-          </header>
-          <p>Tweet is here</p>
-          <footer>
-            <span>time goes here</span>
-            <span>
-              <i class="fas fa-flag"></i>
-              <i class="fas fa-retweet"></i>
-              <i class="fas fa-heart"></i>
-            </span>
-          </footer>
-        </article>
+      </section id="tweets-container" class="tweets-container" >>
       </section>
     </main>
 
