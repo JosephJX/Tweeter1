@@ -1,15 +1,14 @@
-$(document).ready(function () {
-  $("#tweet-text").on('keyup', function () {
-    let tweetCounter = $(this).val().length;
-    console.log(tweetCounter)
-    $("output").text(140 - tweetCounter);
-    let $tc = $(this).parent().find('.counter');
-    console.log("tc test", $(this).parent());
-    if (tweetCounter <= 140) {
-      $tc.removeClass('error');
-    } else {
-      $tc.removeClass("invalid");
-      $tc.addClass('error');
-    }
-  });
+const tweetText = document.getElementById("tweet-text");
+const counter = document.getElementsByName("counter");
+
+
+$(tweetText).on("input", function () {
+  const count = 140;// $(counter).val
+  const tweetCount = $(this).val().length;
+  $(counter).text(count - tweetCount);
+  if ($(counter).val() < 0) {
+    $(counter).css("color", "red")
+  } else {
+    $(counter).css("color", "black")
+  }
 })
