@@ -34,8 +34,37 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-color: inherit;
+  flex-direction: column;
   /* background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
 } */
+}
+
+@media (min-width: 1170px) {
+  body {
+    display: flex;
+  }
+
+  nav.navbar {
+    background-color: #4056a1;
+    /* background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png"); */
+  }
+
+  .header {
+    flex-grow: 1;
+    /* padding-left: 5em; */
+    /* padding-right: 5em; */
+    margin: 5em;
+    margin-top: 12.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 50%;
+    max-width: 750px;
+    height: fit-content;
+  }
+
+  main {
+    margin: 3em;
+  }
 }
 
 /* article.tweet {
