@@ -39,30 +39,32 @@ $(document).ready(function () {
   };
 
   const createTweetElement = (tweet) => {
-    let $tweet = $("<article>").addClass("tweet");
-    let $html = `
-    <header>
-      <span class="user">
-        <img class="userAvatar" src=${tweet.user.avatars}>
-        <p class="username">${tweet.user.name}</p>
-      </span>
-      <div class="handle">${tweet.user.handle}</div>
-    </header>
-    <p>${tweet.content.text}</p>
-    <footer>
-      <span>${timeago.format(tweet.created_at, 'pt_BR')}</span>
-      <span>
-        <i class="fas fa-flag"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="fas fa-heart"></i>
-      </span>
-    </footer>
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+    return `
+    <article class="tweet">
+      <header>
+        <span class="user">
+          <img class="userAvatar" src=${tweet.user.avatars}>
+          <p class="username">${tweet.user.name}</p>
+        </span>
+        <div class="handle">${tweet.user.handle}</div>
+      </header>
+      <p>${escape(tweet.content.text)}</p>
+      <footer>
+        <span>${timeago.format(tweet.created_at, 'pt_BR')}</span>
+        <span>
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+        </span>
+      </footer>
+    </article>
     `;
-    $tweet.append($html)
-    return $tweet;
-
   };
-
   // renderTweets(data);
 
   const loadTweets = (tweets) => {
@@ -74,12 +76,12 @@ $(document).ready(function () {
   };
   loadTweets();
 
-  $("#post-tweet").submit(function (event) {
+  $("#tweet-form").submit(function (event) {
     // Prevent change of page to /tweets
     event.preventDefault();
     // AJAX Request w/ POST method
 
-    if (dataVal($("#tweet-text"))) {
+    if (isDataValid($("#tweet-form-text"))) {
       $.ajax({
         type: "POST",
         url: "/tweets",
@@ -92,12 +94,12 @@ $(document).ready(function () {
 
   });
 
-  const dataVal = (data) => {
-    console.log(data)
-    if (parseInt($(".counter").val()) <= 0) {
+  const isDataVal = (data) => {
+
+    if (data.val().length > 140) {
       alert("too many characters");
       return false;
-    } else if (parseInt($(".counter").val()) === 140) {
+    } else if (data.val().length === 0) {
       alert("Message is empty");
       return false;
     }
