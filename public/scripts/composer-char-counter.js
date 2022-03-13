@@ -1,10 +1,10 @@
-$("#tweetText").on("input", function () {
-  const count = 140;// $(counter).val
+$("#tweet-form-text").on("input", function () {
+  const count = 140;// $(tweet-form-counter).val
   const tweetCount = $(this).val().length;
-  $(".counter").text(count - tweetCount);
-  if ($(".counter").val() < 0) {
-    $(".counter").css("color", "red")
+  $(".tweet-form-counter").text(count - tweetCount);
+  if (tweetCount > 140) {
+    $(".tweet-form-counter").css("color", "red");
   } else {
-    $(".counter").css("color", "black")
+    $(".tweet-form-counter").css("color", "black");
   }
 })

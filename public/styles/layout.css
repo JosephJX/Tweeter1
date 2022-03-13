@@ -34,10 +34,11 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-color: inherit;
-  background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
+  /* background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
+} */
 }
 
-article.tweet {
+/* article.tweet {
   border: 0.1em solid black;
 }
 
@@ -51,17 +52,17 @@ article.tweet header {
   justify-content: start;
   flex-direction: row;
   align-items: center;
+  width: 4em;
 }
 .userAvatar {
   width: 50%;
-  height: auto;
 }
 
 .username {
   font-family: Bungee;
 }
 
-i.fas.fa-flag {
+i.fas.fa-flag { 
   color: #2980b9;
 }
 i.fas.fa-flag:hover {
@@ -91,4 +92,4 @@ article.tweet footer {
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
-}
+} */

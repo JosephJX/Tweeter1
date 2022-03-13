@@ -1,46 +1,40 @@
 .new-tweet {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  padding-top: 2em;
 }
 
-.bottomTweet {
+.tweet-form-footer {
   display: flex;
   justify-content: space-between;
 }
 
-.button {
+.tweet-form-button {
   background: #4056a1;
   background-image: linear-gradient(top, #4056a1, #2980b9);
   background-image: linear-gradient(to top, #4056a1, #2980b9);
   font-family: Bungee;
   color: #ffffff;
   font-size: 20px;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
 }
 
-.button:hover {
+.tweet-form-button:hover {
   background: #3cb0fd;
   background-image: linear-gradient(top, #3cb0fd, #4056a1);
   background-image: linear-gradient(to top, #3cb0fd, #4056a1);
 }
 
-#tweet-text {
-  background-color: #11ffef00;
+#tweet-form-text {
+  background-color: transparent;
   border-bottom: 0.1em black solid;
   border-top: none;
   border-left: none;
   border-right: none;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   outline: none;
+  margin-bottom: 0.5em;
 }
 
-#tweet-text:focus {
-  outline: none;
-}
-
-.counter {
+.tweet-form-counter {
   font-family: Bungee;
 }

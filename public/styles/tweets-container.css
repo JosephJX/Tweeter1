@@ -1,0 +1,69 @@
+.tweets-container {
+}
+
+.user {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  align-items: center;
+  width: 4em;
+}
+.userAvatar {
+  width: 50%;
+}
+
+.username {
+  font-family: Bungee;
+}
+
+i.fas.fa-flag {
+  color: #2980b9;
+}
+i.fas.fa-flag:hover {
+  color: yellow;
+}
+
+i.fas.fa-retweet {
+  color: #2980b9;
+}
+
+i.fas.fa-retweet:hover {
+  color: yellow;
+}
+
+i.fas.fa-heart {
+  color: #2980b9;
+}
+
+i.fas.fa-heart:hover {
+  color: yellow;
+}
+
+article.tweet {
+  border: 0.1em solid black;
+  margin: 1em 0;
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article.tweet p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+article.tweet footer {
+  display: flex;
+  border-top: 0.1em solid black;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
