@@ -6,12 +6,13 @@
 
 $(document).ready(function () {
   const renderTweets = (tweets) => {
+    const container = $('.tweet-container').html('')
     // loops through tweets
     for (let tweet of tweets) {
       // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
-      $("#tweets-container").prepend($tweet);
+      container.prepend($tweet);
     }
   };
 
@@ -55,7 +56,20 @@ $(document).ready(function () {
   };
   loadTweets();
 
-  $("#tweet-form").submit(function (event) {
+  // checks tweet criteria
+  const isDataValid = (data) => {
+
+    if (data.val().length > 140) {
+      $(".new-tweet-error").text("This tweet has gone beyond the character limit.").show();
+      return false;
+    } else if (data.val().length === 0) {
+      $(".new-tweet-error").text("This tweet is empty.").show();
+      return false;
+    }
+    return true;
+  }
+
+  $("#tweet-form").on('submit', function (event) {
     // Prevent change of page to /tweets
     event.preventDefault();
     // AJAX Request w/ POST method
@@ -68,6 +82,7 @@ $(document).ready(function () {
       })
         // refreshes with submission
         .then(function () {
+          console.log('works');
           $(".new-tweet-error").hide();
           $("#tweet-form-text").val("");
           $(".tweet-form-counter").text("140")
@@ -77,18 +92,7 @@ $(document).ready(function () {
 
   });
 
-  // checks tweet criteria
-  const isDataVal = (data) => {
 
-    if (data.val().length > 140) {
-      $(".new-tweet-error").text("This tweet has gone beyond the character limit.").show();
-      return false;
-    } else if (data.val().length === 0) {
-      $(".new-tweet-error").text("This tweet is empty.").show();
-      return false;
-    }
-    return true;
-  }
 
 });
 
