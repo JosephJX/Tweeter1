@@ -90,6 +90,8 @@ $(document).ready(function () {
         data: $(this).serialize()
       })
         .then(function () {
+          $(".new-tweet-error").hide();
+          $("#tweet-form-text").val("");
           loadTweets()
         })
     }
@@ -99,10 +101,10 @@ $(document).ready(function () {
   const isDataVal = (data) => {
 
     if (data.val().length > 140) {
-      alert("too many characters");
+      $(".new-tweet-error").text("This tweet has gone beyond the character limit.").show();
       return false;
     } else if (data.val().length === 0) {
-      alert("Message is empty");
+      $(".new-tweet-error").text("This tweet is empty.").show();
       return false;
     }
     return true;
