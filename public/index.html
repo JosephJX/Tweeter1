@@ -42,22 +42,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- TIMEAGO JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
       
   </head>
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span class="logo">tweeter</span>
-      <div class="compose">
-        <span> <b>Write</b> a new tweet</span>
-        <div class="arrow"><i class="fa-solid fa-angles-down"></i></div>
-        </div>
-    </nav>
 
-    <!-- Main -->
+  <body>
+    
+    <!-- Top nav bar (fixed) -->
+    <nav class="navbar">
+      <p class="navbar-brand">tweeter</p>
+      <div class="navbar-new-tweet">
+        <p><strong>Write</strong> a new tweet</p>
+        <i class="fas fa-angle-double-down"></i>
+      </div>
+    </nav>
+  </body>
+</html> 
+  <!-- Main -->
 
   <header class="header">
     <div class="avatar">
@@ -70,7 +78,7 @@
       <main class = "container">
         <section class="new-tweet-section">
           <h2 class="compose-tweet">Compose Tweet</h2>
-          <form id ="tweet form">
+          <form id="tweet form">
             <label for="tweet-text">What are you humming about?</label>
             <textarea name="text" id ="tweet-text"></textarea>
             <div class="tweet-button-footer">
@@ -78,9 +86,7 @@
               <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-        <div id="errorMessage"></div>
-        <section>
-          <div class="tweets-container"></div>
+
         </main>
       </body>
 
