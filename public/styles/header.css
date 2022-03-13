@@ -1,4 +1,23 @@
-header.nameAndAvatar {
+.header {
   background-color: #ff8801;
   background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
+  display: flex;
+  padding-top: 5.2em;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-avatar {
+  width: fit-content;
+  max-width: 300px;
+}
+
+.header-avatar img {
+  width: 100%;
+}
+
+.header-name {
+  color: #ffffff;
+  font-size: 2em;
 }
