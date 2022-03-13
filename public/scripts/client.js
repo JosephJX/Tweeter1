@@ -1,33 +1,10 @@
+/*
+ * Client-side JS logic goes here
+ * jQuery is already loaded
+ * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+ */
+
 $(document).ready(function () {
-
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com/73hZDYK.png"
-  //       ,
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd"
-  //     },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   }
-  // ]
-
-
-
   const renderTweets = (tweets) => {
     // loops through tweets
     for (let tweet of tweets) {
@@ -89,6 +66,7 @@ $(document).ready(function () {
         url: "/tweets",
         data: $(this).serialize()
       })
+        // refreshes with submission
         .then(function () {
           $(".new-tweet-error").hide();
           $("#tweet-form-text").val("");
@@ -99,6 +77,7 @@ $(document).ready(function () {
 
   });
 
+  // checks tweet criteria
   const isDataVal = (data) => {
 
     if (data.val().length > 140) {

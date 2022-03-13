@@ -20,23 +20,18 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Bungee", cursive;
   font-family: "Source Sans Pro", sans-serif;
 }
 
 .main {
   width: 90%;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   background-color: inherit;
   flex-direction: column;
-  /* background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
-} */
 }
 
 @media (min-width: 1024px) {
@@ -51,8 +46,6 @@ body {
 
   .header {
     flex-grow: 1;
-    /* padding-left: 5em; */
-    /* padding-right: 5em; */
     margin: 5em;
     margin-top: 12.5em;
     padding-left: 2em;
@@ -66,59 +59,3 @@ body {
     margin: 3em;
   }
 }
-
-/* article.tweet {
-  border: 0.1em solid black;
-}
-
-article.tweet header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.user {
-  display: flex;
-  justify-content: start;
-  flex-direction: row;
-  align-items: center;
-  width: 4em;
-}
-.userAvatar {
-  width: 50%;
-}
-
-.username {
-  font-family: Bungee;
-}
-
-i.fas.fa-flag { 
-  color: #2980b9;
-}
-i.fas.fa-flag:hover {
-  color: yellow;
-}
-
-i.fas.fa-retweet {
-  color: #2980b9;
-}
-
-i.fas.fa-retweet:hover {
-  color: yellow;
-}
-
-i.fas.fa-heart {
-  color: #2980b9;
-}
-
-i.fas.fa-heart:hover {
-  color: yellow;
-}
-
-article.tweet footer {
-  display: flex;
-  border-top: 0.1em solid black;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-between;
-} */
