@@ -34,9 +34,7 @@ $(document).ready(function () {
       // calls createTweetElement for each tweet
       const $tweet = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
-      console.log($tweet);
       $("#tweets-container").append($tweet);
-      // console.log($("#tweets-container"));
     }
   };
 
