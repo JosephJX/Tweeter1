@@ -51,7 +51,7 @@ $(document).ready(function () {
     $.ajax("/tweets", { method: "GET" })
       .then(function (tweets) {
         renderTweets(tweets);
-        console.log("success", tweets)
+        // console.log("success", tweets)
       })
   };
   loadTweets();
@@ -82,7 +82,7 @@ $(document).ready(function () {
       })
         // refreshes with submission
         .then(function () {
-          console.log('works');
+          // console.log('works');
           $(".new-tweet-error").hide();
           $("#tweet-form-text").val("");
           $(".tweet-form-counter").text("140")
