@@ -1,97 +1,46 @@
-.form {
-  position: relative;
-  font-size: 1.2em;
-  margin-top: 1%;
-}
-
-.new-tweet-section {
-  top: 0px;
+.new-tweet {
   width: 90%;
-  display: flex;
-  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.compose-tweet {
-  display: flex;
-  /* justify-content: center; */
-}
-
-.tweet-text {
-  display: flex;
-  width: 100%;
-  background-color: transparent;
-  /* justify-content: center; */
-  /* border: none;
-  border-style: none;
-  resize: none;
-  outline: none; */
-  border-bottom: 2px solid black;
-  /* width: 100%;
-  resize: none;
-  border: none;
- 
-  
-  font-size: 0.8em; */
-}
-.tweet-button-counter {
-  font-family: "Bungee", cursive;
+.bottomTweet {
   display: flex;
   justify-content: space-between;
 }
-.tweet-button {
-  background-color: #4056a1;
+
+.button {
+  background: #4056a1;
+  background-image: linear-gradient(top, #4056a1, #2980b9);
+  background-image: linear-gradient(to top, #4056a1, #2980b9);
+  font-family: Bungee;
   color: #ffffff;
-  padding: 0.15em;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
 }
 
-button {
-  background-color: blue;
-  color: white;
-  border: 2px solid black;
-  padding: 3px 10px;
-  left: 0;
+.button:hover {
+  background: #3cb0fd;
+  background-image: linear-gradient(top, #3cb0fd, #4056a1);
+  background-image: linear-gradient(to top, #3cb0fd, #4056a1);
 }
 
 #tweet-text {
-  background: transparent;
-  width: 100%;
-  border: none;
-  border-style: none;
-  resize: none;
+  background-color: #11ffef00;
+  border-bottom: 0.1em black solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   outline: none;
-  margin-bottom: -10px;
-  margin-bottom: 10px;
-  border-bottom: 3px solid black;
 }
 
-.counter.error {
-  color: red;
+#tweet-text:focus {
+  outline: none;
 }
 
-#errorMessage {
-  display: none;
-  margin-top: 5px;
-  color: red;
-}
-
-.invalid-tweet {
-  background-color: #4056a1;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.toggled-invalid-tweet {
-  background-color: #4056a1;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: thin solid darkblue;
-  border-radius: 10px;
-  margin-bottom: 2em;
-  padding: 0.8em;
-  height: 2em;
-  box-shadow: 3px 5px 0 0.5px darkblue;
+.counter {
+  font-family: Bungee;
 }

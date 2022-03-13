@@ -24,9 +24,6 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 .main {
   width: 90%;
   margin: auto;
@@ -38,4 +35,60 @@ body {
   margin-right: auto;
   background-color: inherit;
   background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
+}
+
+article.tweet {
+  border: 0.1em solid black;
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  align-items: center;
+}
+.userAvatar {
+  width: 50%;
+  height: auto;
+}
+
+.username {
+  font-family: Bungee;
+}
+
+i.fas.fa-flag {
+  color: #2980b9;
+}
+i.fas.fa-flag:hover {
+  color: yellow;
+}
+
+i.fas.fa-retweet {
+  color: #2980b9;
+}
+
+i.fas.fa-retweet:hover {
+  color: yellow;
+}
+
+i.fas.fa-heart {
+  color: #2980b9;
+}
+
+i.fas.fa-heart:hover {
+  color: yellow;
+}
+
+article.tweet footer {
+  display: flex;
+  border-top: 0.1em solid black;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
 }
