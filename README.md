@@ -16,15 +16,17 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+  "body-parser": "^1.15.2",
+  "chance": "^1.0.2",
+  "express": "^4.13.4",
+  "md5": "^2.1.0"
 
 ## Screenshots
 
-!["Screenshot of tweet compose box with character counter"]()
+!["Screenshot of tweet compose box with character counter"](https://github.com/JosephJX/Tweeter1/blob/master/public/docs%20/charcounter.png)
 
-!["Screenshot of tweet compose box with character counter"]()
+!["Screenshot of error message"](https://github.com/JosephJX/Tweeter1/blob/master/public/docs%20/overthelimit.png)
 
-!["Screenshot of error message"]()
+!["Screenshot of mobile format"](https://github.com/JosephJX/Tweeter1/blob/master/public/docs%20/mobile.png)
 
-!["Screenshot of mobile format"]()
-
-!["Screenshot of tablet format"]()
+!["Screenshot of desktop format"](https://github.com/JosephJX/Tweeter1/blob/master/public/docs%20/desktop_view.png)
